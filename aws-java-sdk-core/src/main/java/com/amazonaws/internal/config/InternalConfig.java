@@ -42,7 +42,7 @@ public class InternalConfig {
     //@formatter:off
     private static final ObjectMapper MAPPER = new ObjectMapper()
             .disable(MapperFeature.CAN_OVERRIDE_ACCESS_MODIFIERS)
-            .enable(JsonParser.Feature.ALLOW_COMMENTS)
+            .configure(JsonParser.Feature.ALLOW_COMMENTS, true)
             .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
     //@formatter:on
 
